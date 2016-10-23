@@ -1,0 +1,6 @@
+# Directories to ignore # ("/" must be append)
+.idea/
+out/
+
+# Files #
+*.iml
