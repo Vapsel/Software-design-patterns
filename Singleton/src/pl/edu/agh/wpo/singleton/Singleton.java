@@ -6,7 +6,7 @@ package pl.edu.agh.wpo.singleton;
 public class Singleton {
 
     private static class Wrapper{
-        // Na pewno ladowane tylko raz
+        // Na pewno ladowane tylko raz. Ładowane do metespace od Java 1.8; do Java 1.7 ładowane do pregen
         private static Singleton instance = new Singleton();
     }
 

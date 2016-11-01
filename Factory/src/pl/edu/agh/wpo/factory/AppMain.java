@@ -1,38 +1,28 @@
 package pl.edu.agh.wpo.factory;
 
+import pl.edu.agh.wpo.factory.abstractmethod.DataBaseCommand;
+import pl.edu.agh.wpo.factory.abstractmethod.MySQLCommand;
+import pl.edu.agh.wpo.factory.abstractmethod.OraclCommand;
+
 /**
- * Created by Вадим on 19/10/2016.
+ * Abstract Factory: (factory of factories)
+ * products - rodzina obiektów do tworzenia.
+ * Te obiekty implementują wspólne interfejsy (Button, Input, Window).
+ * Struktura jest symetryczna dla każdej rodziny
+ *
+ *
+ * Dependency inversion stosuje się przy tworzeniu factory method
  */
 public class AppMain {
 
 
     public static void main(String[] args) {
-        int type;
+        // Wykorzystanie factory method
+        DataBaseCommand dataBaseCommand = new MySQLCommand();
+        dataBaseCommand.executeCommand();
 
-        OraclDB oracl;
-        MSSQLDB mssql;
-        MySQLDB mysql;
-
-        if (type == 0){
-             oracl = new OraclDB();
-        }
-        if (type == 1) {
-            mssql = new MSSQLDB();
-        }
-        if (type == 2){
-            mysql = new MySQLDB();
-        }
-
-        if (type == 0){
-            oracl.execute();
-        }
-        if (type == 1) {
-            mssql.execute();
-        }
-        if (type == 2){
-            mysql.execute();
-        }
-
+//        DataBaseCommand dataBaseCommand = new MySQLCommand();
+//        dataBaseCommand.executeCommand();
     }
 }
 
