@@ -1,0 +1,44 @@
+Dekorator
+
+Stosuje się w czytaniu plików, http requestów, buforów...
+W projekcie !!!!!!!!!treba!!!!!!!!!!! stosować decorator.
+
+Class A ma wazną metodę
+jeżeli chcemy cos dodać po albo przed ważną metoda
+	1. Jesteśmy właścicielem i mozemy zmienić kod
+	2. Be open for extention and use decorator
+		Tworzymy 
+		Class B {
+			private A a;
+			void ważna_metoda_bis(){
+				wywołaj_przed();
+				a.ważna_metoda();
+				wywołaj_po();
+			}
+		}
+
+	3. Aspects (based on annotaion)
+
+
+
+God object (obiekt Bóg) - ma w sobie praktycznie wszystkie metody
+
+Be open for extention and be close for modification
+
+Dependecy inversion
+
+
+Adapter
+
+Jest podobny do dekoratora. 
+Sens -> zmiana typu arguentów (adaptujemy obiekty do użycia w innych metodach). 
+Żadnej logiki biznesowej
+
+Class A {
+	ważna metoda(byte[]...)
+}
+
+
+Fasada
+
+Podobny do adaptera.
